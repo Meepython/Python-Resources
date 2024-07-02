@@ -139,3 +139,63 @@ print("coin 2: ",coin2, "baht")
 print("coin 1: ",coin1, "baht")
 
 #===============================================
+
+# Test 3-2
+
+# Figure 1
+ตอบ .split() เป็นคำสั่งที่ใช้แยกค่า str ให้อยู่ในรูปแบบ List คำสั่งนี้ใช้ได้ทั้งกับตัวแปรที่มีค่า str และ ใช้กับ input() ในเวลาที่อยากใส่ค่า input มากกว่า 1 ค่าในบรรทัดเดียว เช่น a,b,c = input().split() จะรับค่า str สามค่า(ดับเบิลคลิกเพื่อตอบ)
+
+# Figure 2
+v1,v2,v3,v4,v5 = (int(e) for e in input().split())
+V = (v1,v2,v3,v4,v5)
+u1,u2,u3,u4,u5 = (int(e) for e in input().split())
+U = (u1,u2,u3,u4,u5)
+
+TotalVector = ((v1+u1),(v2+u2),(v3+u3),(v4+u4),(v5+u5))
+print("เวกเตอร์ V+U = ",(TotalVector))
+
+# Figure 3
+x1,x2,x3,x4,x5,x6,x7,x8,x9,x10 = (int(e) for e in input().split())
+mean = (x1+x2+x3+x4+x5+x6+x7+x8+x9+x10)/10
+print("Mean: ", mean)
+
+# Figure 4
+a,b,c = input("Input A,B as char and C as Int: ").split()
+c = int(c)
+
+test = a+b
+print(test * c)
+
+# Figure 5
+name1,name2,name3,name4,name5,name6,name7,name8,name9,name10 = input("Input your name").split()
+lname1,lname2,lname3,lname4,lname5,lname6,lname7,lname8,lname9,lname10 = input("Inout your surname").split()
+score1,score2,score3,score4,score5,score6,score7,score8,score9,score10 = (int(e) for e in input("Input your score").split())
+
+score_mean = (score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8 + score9 + score10) / 10
+
+print(f"""
+
+Average score of ... Students
+
+||========================================================||
+||   Name               Surname              Score        ||
+||========================================================||
+
+  {name1:<15}       {lname1:<15}        {score1:<3}
+  {name2:<15}       {lname2:<15}        {score2:<3}
+  {name3:<15}       {lname3:<15}        {score3:<3}
+  {name4:<15}       {lname4:<15}        {score4:<3}
+  {name5:<15}       {lname5:<15}        {score5:<3}
+  {name6:<15}       {lname6:<15}        {score6:<3}
+  {name7:<15}       {lname7:<15}        {score7:<3}
+  {name8:<15}       {lname8:<15}        {score8:<3}
+  {name9:<15}       {lname9:<15}        {score9:<3}
+  {name10:<15}      {lname10:<15}       {score10:<3}
+
+===========================================================
+
+  Score Average                         {score_mean:<5}
+
+===========================================================
+
+ """)
